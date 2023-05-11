@@ -1,0 +1,39 @@
+The Two Sum problem on LeetCode is a classic interview question in computer science. Some ways to solve it:
+    1. Brute Force
+    2. Using Hashtable
+    3. 2 Pointers
+    4. Binary Search
+
+1. Brute Force: 
+    - The simplest solution to this problem is to iterate over the array twice and check every pair of numbers to see if they add up to the target. 
+    This solution has a time complexity of O(n^2), where n is the length of the array.
+    - Time complexity: O(n^2)
+    - Space complexity: O(1)
+2. Hash Table: 
+    - We can use a hash table to store the numbers we have seen so far, and their indices. As we iterate over the array, we check if the target 
+    minus the current number is already in the hash table. If it is, we have found our solution. This solution has a time complexity of O(n) and 
+    a space complexity of O(n).
+    - Time complexity: O(n)
+    - Space complexity: O(n)
+3. Two-Pointers: 
+    - We can also solve this problem using the two-pointers technique. First, we sort the array. Then, we initialize two pointers, one at the 
+    beginning and one at the end of the array. We add the numbers at these pointers, and if the sum is greater than the target, we move the right 
+    pointer to the left. If the sum is less than the target, we move the left pointer to the right. If the sum is equal to the target, we have 
+    found our solution. This solution has a time complexity of O(n log n) due to the sorting step, but it has a space complexity of O(1) since 
+    we don't need to use any extra data structures.
+    - Time complexity: O(n log n) - if the array is unsorted, we need to sort it first, which takes O(n log n) time. Otherwise, if the array is sorted,
+    we can use two pointers to traverse the array, which takes O(n) time.
+    - Space complexity: O(1)
+
+4. Binary Search: 
+    - If the array is sorted, we can use binary search to find the complement of each number (i.e., the target minus the current number) in the 
+    array. This solution has a time complexity of O(n log n) due to the sorting step, but it has a space complexity of O(1) since we don't need 
+    to use any extra data structures.
+    - Time complexity: O(n log n) - if the array is unsorted, we need to sort it first, which takes O(n log n) time. Otherwise, if the array is sorted,
+    we can use binary search to find the target number, which takes O(log n) time. We need to perform binary search for each element in the array, 
+    which takes O(n log n) time in total.
+    - Space complexity: O(1) - if we use iterative binary search, or O(log n) - if we use recursive binary search.
+
+The most efficient method is the hashtable method, which has a time complexity of O(n) and a space complexity of O(n). The 2 pointers and 
+binary search methods can also be efficient if the array is sorted or if we can sort it first. The brute force method is the least efficient, 
+with a time complexity of O(n^2).
